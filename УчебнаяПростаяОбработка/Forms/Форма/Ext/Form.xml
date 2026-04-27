@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.15">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<ChildItems>
+		<InputField name="Организация" id="1">
+			<DataPath>Объект.Организация</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ОрганизацияКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="3"/>
+		</InputField>
+		<Table name="Накладные" id="4">
+			<Representation>List</Representation>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>Объект.Накладные</DataPath>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="НакладныеКонтекстноеМеню" id="5"/>
+			<AutoCommandBar name="НакладныеКоманднаяПанель" id="6">
+				<Autofill>false</Autofill>
+				<ChildItems>
+					<Button name="НакладныеКоманда1" id="34">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.Очистить</CommandName>
+						<ExtendedTooltip name="НакладныеКоманда1РасширеннаяПодсказка" id="35"/>
+					</Button>
+					<Button name="НакладныеЗаполнить" id="32">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.Заполнить</CommandName>
+						<ExtendedTooltip name="НакладныеЗаполнитьРасширеннаяПодсказка" id="33"/>
+					</Button>
+				</ChildItems>
+			</AutoCommandBar>
+			<ExtendedTooltip name="НакладныеРасширеннаяПодсказка" id="7"/>
+			<SearchStringAddition name="НакладныеСтрокаПоиска" id="8">
+				<AdditionSource>
+					<Item>Накладные</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="НакладныеСтрокаПоискаКонтекстноеМеню" id="9"/>
+				<ExtendedTooltip name="НакладныеСтрокаПоискаРасширеннаяПодсказка" id="10"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="НакладныеСостояниеПросмотра" id="11">
+				<AdditionSource>
+					<Item>Накладные</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="НакладныеСостояниеПросмотраКонтекстноеМеню" id="12"/>
+				<ExtendedTooltip name="НакладныеСостояниеПросмотраРасширеннаяПодсказка" id="13"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="НакладныеУправлениеПоиском" id="14">
+				<AdditionSource>
+					<Item>Накладные</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="НакладныеУправлениеПоискомКонтекстноеМеню" id="15"/>
+				<ExtendedTooltip name="НакладныеУправлениеПоискомРасширеннаяПодсказка" id="16"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<LabelField name="НакладныеНомерСтроки" id="17">
+					<DataPath>Объект.Накладные.LineNumber</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="НакладныеНомерСтрокиКонтекстноеМеню" id="18"/>
+					<ExtendedTooltip name="НакладныеНомерСтрокиРасширеннаяПодсказка" id="19"/>
+				</LabelField>
+				<InputField name="НакладныеВидДокумента" id="20">
+					<DataPath>Объект.Накладные.ВидДокумента</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="НакладныеВидДокументаКонтекстноеМеню" id="21"/>
+					<ExtendedTooltip name="НакладныеВидДокументаРасширеннаяПодсказка" id="22"/>
+				</InputField>
+				<InputField name="НакладныеДокумент" id="23">
+					<DataPath>Объект.Накладные.Документ</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="НакладныеДокументКонтекстноеМеню" id="24"/>
+					<ExtendedTooltip name="НакладныеДокументРасширеннаяПодсказка" id="25"/>
+				</InputField>
+				<InputField name="НакладныеТовар" id="26">
+					<DataPath>Объект.Накладные.Товар</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="НакладныеТоварКонтекстноеМеню" id="27"/>
+					<ExtendedTooltip name="НакладныеТоварРасширеннаяПодсказка" id="28"/>
+				</InputField>
+				<InputField name="НакладныеСумма" id="29">
+					<DataPath>Объект.Накладные.Сумма</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="НакладныеСуммаКонтекстноеМеню" id="30"/>
+					<ExtendedTooltip name="НакладныеСуммаРасширеннаяПодсказка" id="31"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:ExternalDataProcessorObject.УчебнаяПростаяОбработка</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="Очистить" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Очистить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Очистить</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Очистить</Action>
+		</Command>
+		<Command name="Заполнить" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Заполнить</Action>
+		</Command>
+	</Commands>
+</Form>
